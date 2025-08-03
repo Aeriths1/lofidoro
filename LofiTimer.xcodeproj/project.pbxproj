@@ -23,7 +23,7 @@
 		4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */; };
 		4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */; };
 		4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */; };
-		4F1A2B3C2B4D5E6F789012E1 /* zelda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */; };
+		4F1A2B3C2B4D5E6F789012E3 /* zelda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */; };
 		4F1A2B3C2B4D5E6F789012CF /* GifGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */; };
 		4F1A2B3C2B4D5E6F789012D1 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */; };
 		4F1A2B3C2B4D5E6F789012D3 /* MusicSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */; };
@@ -220,7 +220,7 @@
 				4F1A2B3C2B4D5E6F789012D7 /* rabbit.gif in Resources */,
 				4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */,
-				4F1A2B3C2B4D5E6F789012E1 /* zelda.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012E3 /* zelda.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
