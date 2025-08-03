@@ -23,6 +23,7 @@
 		4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */; };
 		4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */; };
 		4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */; };
+		4F1A2B3C2B4D5E6F789012E1 /* zelda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */; };
 		4F1A2B3C2B4D5E6F789012CF /* GifGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */; };
 		4F1A2B3C2B4D5E6F789012D1 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */; };
 		4F1A2B3C2B4D5E6F789012D3 /* MusicSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */; };
@@ -46,6 +47,7 @@
 		4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "nujabes-flowers.mp3"; path = "LofiTimer/Resources/Audio/music/nujabes/nujabes-flowers.mp3"; sourceTree = SOURCE_ROOT; };
 		4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kudasai-lofi-background.mp3"; path = "LofiTimer/Resources/Audio/music/kudasai/kudasai-lofi-background.mp3"; sourceTree = SOURCE_ROOT; };
 		4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "timer_complete.mp3"; path = "LofiTimer/Resources/Audio/effects/timer_complete.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "zelda.mp3"; path = "LofiTimer/Resources/Audio/music/zelda/zelda.mp3"; sourceTree = SOURCE_ROOT; };
 		4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifGalleryView.swift; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSelectorView.swift; sourceTree = "<group>"; };
@@ -131,6 +133,7 @@
 			children = (
 				4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */,
 				4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */,
+				4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */,
 				4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */,
 			);
 			path = Audio;
@@ -217,6 +220,7 @@
 				4F1A2B3C2B4D5E6F789012D7 /* rabbit.gif in Resources */,
 				4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012E1 /* zelda.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
