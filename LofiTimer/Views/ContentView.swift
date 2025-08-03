@@ -19,7 +19,8 @@ struct ContentView: View {
                     displayMode: userSettings.gifDisplayMode,
                     scale: userSettings.gifScale,
                     offsetX: userSettings.gifOffsetX,
-                    offsetY: userSettings.gifOffsetY
+                    offsetY: userSettings.gifOffsetY,
+                    playbackSpeed: userSettings.gifPlaybackSpeed
                 )
                 .ignoresSafeArea()
                 
@@ -39,9 +40,13 @@ struct ContentView: View {
                 
                 // Main UI
                 VStack {
-                    // Top timer display - like iPhone clock
-                    topTimerDisplay
+                    // Top status indicator - studying/chilling
+                    topStatusIndicator
                         .padding(.top, 60) // Account for status bar
+                    
+                    // Timer display
+                    timerDisplay
+                        .padding(.top, 20)
                     
                     Spacer()
                     
@@ -49,8 +54,8 @@ struct ContentView: View {
                     VStack(spacing: 40) {
                         controlButtonsMinimal
                         
-                        // Bottom info bar
-                        bottomInfoBar
+                        // Bottom info bar (without status)
+                        bottomControlsBar
                     }
                     .padding(.bottom, 50)
                 }
@@ -76,7 +81,7 @@ struct ContentView: View {
         VStack(spacing: 12) {
             // Large time display
             Text(timerViewModel.timeDisplayText)
-                .font(.system(size: 86, weight: .ultraLight, design: .rounded))
+                .font(.system(size: 86, weight: .bold, design: .rounded))
                 .foregroundColor(.white)
                 .monospacedDigit()
                 .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 5)
@@ -126,6 +131,100 @@ struct ContentView: View {
                 }
             }
             .padding(.top, 12)
+        }
+        .padding(.horizontal, 30)
+    }
+    
+    private var topStatusIndicator: some View {
+        HStack(spacing: 12) {
+            Circle()
+                .fill(timerViewModel.isRunning ? 
+                      Color(red: 0.4, green: 1.0, blue: 0.6) : 
+                      Color.white.opacity(0.5))
+                .frame(width: 12, height: 12)
+                .scaleEffect(timerViewModel.isRunning ? 1.0 : 0.8)
+                .animation(
+                    timerViewModel.isRunning ?
+                    Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true) :
+                    Animation.easeInOut(duration: 0.3),
+                    value: timerViewModel.isRunning
+                )
+                .shadow(color: timerViewModel.isRunning ? 
+                       Color(red: 0.4, green: 1.0, blue: 0.6).opacity(0.6) : 
+                       Color.clear, radius: 8)
+            
+            Text(timerViewModel.isRunning ? "studying" : "chilling")
+                .font(.system(size: 16, weight: .medium, design: .rounded))
+                .foregroundColor(.white.opacity(0.9))
+                .tracking(2)
+                .textCase(.lowercase)
+        }
+        .padding(.horizontal, 20)
+        .padding(.vertical, 12)
+        .background(
+            Capsule()
+                .fill(Color.white.opacity(0.1))
+                .background(
+                    Capsule()
+                        .fill(.ultraThinMaterial)
+                        .opacity(0.3)
+                )
+        )
+    }
+    
+    private var timerDisplay: some View {
+        VStack(spacing: 16) {
+            // Large time display
+            Text(timerViewModel.timeDisplayText)
+                .font(.system(size: 86, weight: .bold, design: .rounded))
+                .foregroundColor(.white)
+                .monospacedDigit()
+                .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 5)
+            
+            // Session type
+            Text(timerViewModel.sessionTypeText)
+                .font(.system(size: 18, weight: .medium, design: .rounded))
+                .foregroundColor(.white.opacity(0.8))
+                .textCase(.lowercase)
+                .tracking(2)
+            
+            // Progress bar
+            GeometryReader { geo in
+                ZStack(alignment: .leading) {
+                    Capsule()
+                        .fill(Color.white.opacity(0.15))
+                        .frame(height: 4)
+                    
+                    Capsule()
+                        .fill(
+                            LinearGradient(
+                                gradient: Gradient(colors: [
+                                    Color(red: 1.0, green: 0.7, blue: 0.5),
+                                    Color(red: 0.8, green: 0.5, blue: 1.0)
+                                ]),
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                        .frame(width: geo.size.width * timerViewModel.progress, height: 4)
+                        .animation(.linear(duration: 1.0), value: timerViewModel.progress)
+                }
+            }
+            .frame(height: 4)
+            .frame(maxWidth: 320)
+            
+            // Pomodoro dots
+            HStack(spacing: 8) {
+                ForEach(0..<4, id: \.self) { index in
+                    Circle()
+                        .fill(timerViewModel.pomodoroProgress[index] ? 
+                              Color.white : Color.white.opacity(0.3))
+                        .frame(width: 6, height: 6)
+                        .scaleEffect(timerViewModel.pomodoroProgress[index] ? 1.2 : 1.0)
+                        .animation(.easeInOut(duration: 0.3), value: timerViewModel.pomodoroProgress[index])
+                }
+            }
+            .padding(.top, 8)
         }
         .padding(.horizontal, 30)
     }
@@ -232,45 +331,8 @@ struct ContentView: View {
         }
     }
     
-    private var bottomInfoBar: some View {
-        ZStack {
-            // Status indicator - Always centered
-            HStack(spacing: 8) {
-                Circle()
-                    .fill(timerViewModel.isRunning ? 
-                          Color(red: 0.4, green: 1.0, blue: 0.6) : 
-                          Color.white.opacity(0.5))
-                    .frame(width: 8, height: 8)
-                    .scaleEffect(timerViewModel.isRunning ? 1.0 : 0.8)
-                    .animation(
-                        timerViewModel.isRunning ?
-                        Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true) :
-                        Animation.easeInOut(duration: 0.3),
-                        value: timerViewModel.isRunning
-                    )
-                    .shadow(color: timerViewModel.isRunning ? 
-                           Color(red: 0.4, green: 1.0, blue: 0.6).opacity(0.6) : 
-                           Color.clear, radius: 6)
-                
-                Text(timerViewModel.isRunning ? "studying" : "chilling")
-                    .font(.system(size: 13, weight: .medium, design: .rounded))
-                    .foregroundColor(.white.opacity(0.8))
-                    .tracking(1)
-            }
-            .padding(.horizontal, 14)
-            .padding(.vertical, 8)
-            .background(
-                Capsule()
-                    .fill(Color.white.opacity(0.1))
-                    .background(
-                        Capsule()
-                            .fill(.ultraThinMaterial)
-                            .opacity(0.2)
-                    )
-            )
-            
-            // Side controls
-            HStack(spacing: 20) {
+    private var bottomControlsBar: some View {
+        HStack(spacing: 20) {
                 // Volume control
                 HStack {
                     Button(action: {

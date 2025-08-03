@@ -34,15 +34,18 @@ struct GifImageView: UIViewRepresentable {
     let gifName: String
     let isAnimating: Bool
     let contentMode: UIView.ContentMode
+    let playbackSpeed: Double
     
-    init(gifName: String, isAnimating: Bool, contentMode: UIView.ContentMode = .scaleAspectFill) {
+    init(gifName: String, isAnimating: Bool, contentMode: UIView.ContentMode = .scaleAspectFill, playbackSpeed: Double = 1.0) {
         self.gifName = gifName
         self.isAnimating = isAnimating
         self.contentMode = contentMode
+        self.playbackSpeed = playbackSpeed
     }
     
     class Coordinator {
         var currentGifName: String = ""
+        var currentPlaybackSpeed: Double = 1.0
     }
     
     func makeCoordinator() -> Coordinator {
@@ -71,6 +74,7 @@ struct GifImageView: UIViewRepresentable {
         
         loadGif(imageView: imageView)
         context.coordinator.currentGifName = gifName
+        context.coordinator.currentPlaybackSpeed = playbackSpeed
         
         if isAnimating {
             imageView.startAnimating()
@@ -81,11 +85,12 @@ struct GifImageView: UIViewRepresentable {
     
     func updateUIView(_ uiView: UIView, context: Context) {
         if let imageView = uiView.subviews.first as? UIImageView {
-            // Check if GIF name changed
-            if context.coordinator.currentGifName != gifName {
-                print("GIF changed from \(context.coordinator.currentGifName) to \(gifName)")
+            // Check if GIF name or speed changed
+            if context.coordinator.currentGifName != gifName || context.coordinator.currentPlaybackSpeed != playbackSpeed {
+                print("GIF changed from \(context.coordinator.currentGifName) to \(gifName) or speed changed from \(context.coordinator.currentPlaybackSpeed) to \(playbackSpeed)")
                 loadGif(imageView: imageView)
                 context.coordinator.currentGifName = gifName
+                context.coordinator.currentPlaybackSpeed = playbackSpeed
             }
             
             // Update content mode if changed
@@ -153,7 +158,8 @@ struct GifImageView: UIViewRepresentable {
         
         if !images.isEmpty {
             imageView.animationImages = images
-            imageView.animationDuration = duration
+            // Adjust duration based on playback speed (lower duration = faster playback)
+            imageView.animationDuration = duration / playbackSpeed
             imageView.animationRepeatCount = 0
             imageView.image = images[0]
         }
@@ -169,6 +175,7 @@ struct LofiGirlAnimationView: View {
     let scale: Double
     let offsetX: Double
     let offsetY: Double
+    let playbackSpeed: Double
     
     var contentMode: UIView.ContentMode {
         switch displayMode {
@@ -187,7 +194,7 @@ struct LofiGirlAnimationView: View {
     
     var body: some View {
         // Full screen GIF background with customizable display mode
-        GifImageView(gifName: gifName, isAnimating: true, contentMode: contentMode)
+        GifImageView(gifName: gifName, isAnimating: true, contentMode: contentMode, playbackSpeed: playbackSpeed)
             .frame(width: availableWidth, height: availableHeight)
             .scaleEffect(displayMode == "original" ? CGFloat(scale) : 1.0)
             .offset(x: CGFloat(offsetX), y: CGFloat(offsetY))
@@ -205,7 +212,8 @@ struct LofiGirlAnimationView: View {
             displayMode: "fill",
             scale: 1.0,
             offsetX: 0,
-            offsetY: 0
+            offsetY: 0,
+            playbackSpeed: 1.0
         )
         LofiGirlAnimationView(
             isStudying: false, 
@@ -215,7 +223,8 @@ struct LofiGirlAnimationView: View {
             displayMode: "fit",
             scale: 1.0,
             offsetX: 0,
-            offsetY: 0
+            offsetY: 0,
+            playbackSpeed: 2.0
         )
     }
     .padding()

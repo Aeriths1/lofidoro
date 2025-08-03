@@ -62,6 +62,10 @@ class UserSettings: ObservableObject {
         didSet { saveSettings() }
     }
     
+    @Published var gifPlaybackSpeed: Double = 1.0 {
+        didSet { saveSettings() }
+    }
+    
     private let userDefaults = UserDefaults.standard
     
     init() {
@@ -84,6 +88,7 @@ class UserSettings: ObservableObject {
         gifScale = userDefaults.object(forKey: "gifScale") as? Double ?? 1.0
         gifOffsetX = userDefaults.object(forKey: "gifOffsetX") as? Double ?? 0.0
         gifOffsetY = userDefaults.object(forKey: "gifOffsetY") as? Double ?? 0.0
+        gifPlaybackSpeed = userDefaults.object(forKey: "gifPlaybackSpeed") as? Double ?? 1.0
     }
     
     private func saveSettings() {
@@ -102,6 +107,7 @@ class UserSettings: ObservableObject {
         userDefaults.set(gifScale, forKey: "gifScale")
         userDefaults.set(gifOffsetX, forKey: "gifOffsetX")
         userDefaults.set(gifOffsetY, forKey: "gifOffsetY")
+        userDefaults.set(gifPlaybackSpeed, forKey: "gifPlaybackSpeed")
     }
     
     func incrementCompletedPomodoros() {

@@ -175,6 +175,7 @@ struct GifGalleryView: View {
     @State private var customScale: CGFloat = 1.0
     @State private var offsetX: CGFloat = 0
     @State private var offsetY: CGFloat = 0
+    @State private var playbackSpeed: CGFloat = 1.0
     
     private let gifLoader = GifLoader.shared
     
@@ -203,7 +204,8 @@ struct GifGalleryView: View {
                                     GifImageView(
                                         gifName: selectedGif,
                                         isAnimating: true,
-                                        contentMode: selectedDisplayMode.contentMode
+                                        contentMode: selectedDisplayMode.contentMode,
+                                        playbackSpeed: Double(playbackSpeed)
                                     )
                                     .frame(width: geometry.size.width, height: geometry.size.height)
                                     .scaleEffect(selectedDisplayMode == .original ? customScale : 1.0)
@@ -274,6 +276,50 @@ struct GifGalleryView: View {
                                             endPoint: .trailing
                                         )
                                     )
+                            }
+                        }
+                        
+                        // Playback Speed Control
+                        VStack(alignment: .leading, spacing: 8) {
+                            HStack {
+                                Text("Playback Speed")
+                                    .font(.subheadline)
+                                    .foregroundColor(.primary)
+                                
+                                Spacer()
+                                
+                                Text("\(playbackSpeed, specifier: "%.1f")x")
+                                    .font(.caption)
+                                    .foregroundColor(.secondary)
+                                    .monospacedDigit()
+                            }
+                            
+                            Slider(value: $playbackSpeed, in: 0.25...4.0, step: 0.25)
+                                .tint(
+                                    LinearGradient(
+                                        gradient: Gradient(colors: [
+                                            Color(red: 1.0, green: 0.7, blue: 0.5),
+                                            Color(red: 0.8, green: 0.5, blue: 1.0)
+                                        ]),
+                                        startPoint: .leading,
+                                        endPoint: .trailing
+                                    )
+                                )
+                            
+                            HStack {
+                                Button("0.5x") { playbackSpeed = 0.5 }
+                                    .font(.caption)
+                                    .foregroundColor(.blue)
+                                
+                                Button("1.0x") { playbackSpeed = 1.0 }
+                                    .font(.caption)
+                                    .foregroundColor(.blue)
+                                
+                                Button("2.0x") { playbackSpeed = 2.0 }
+                                    .font(.caption) 
+                                    .foregroundColor(.blue)
+                                
+                                Spacer()
                             }
                         }
                         
@@ -402,6 +448,7 @@ struct GifGalleryView: View {
                         userSettings.gifScale = Double(customScale)
                         userSettings.gifOffsetX = Double(offsetX)
                         userSettings.gifOffsetY = Double(offsetY)
+                        userSettings.gifPlaybackSpeed = Double(playbackSpeed)
                         dismiss()
                     }
                     .fontWeight(.semibold)
@@ -415,6 +462,7 @@ struct GifGalleryView: View {
             customScale = CGFloat(userSettings.gifScale)
             offsetX = CGFloat(userSettings.gifOffsetX)
             offsetY = CGFloat(userSettings.gifOffsetY)
+            playbackSpeed = CGFloat(userSettings.gifPlaybackSpeed)
         }
     }
     
