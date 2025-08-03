@@ -129,3 +129,6 @@ Temporary Items
 *.avi
 *.flv
 *.wmv
+
+# Large local audio files - keep local only
+LofiTimer/Resources/Audio/music/zelda/zelda.mp3
