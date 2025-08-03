@@ -1,0 +1,13 @@
+TIMER PAUSE SOUND NEEDED
+========================
+Recommended: Subtle click or soft beep
+Duration: 0.3-0.5 seconds
+Style: Minimal, clean
+
+Try these searches on freesound.org:
+- "soft click"
+- "interface sound"
+- "subtle beep"
+- "menu select"
+
+Or use system sound ID: 1104 (Tock)

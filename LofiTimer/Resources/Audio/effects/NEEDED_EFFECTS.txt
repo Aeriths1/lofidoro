@@ -1,0 +1,27 @@
+NEEDED SOUND EFFECTS
+===================
+
+Please add these sound effect files:
+
+1. timer_start.mp3
+   - A gentle chime or soft bell sound
+   - Duration: 0.5-1 second
+   - Example: Soft "ding" or meditation bell
+
+2. timer_pause.mp3
+   - A subtle click or soft tone
+   - Duration: 0.3-0.5 seconds
+   - Example: Soft "click" or muted beep
+
+3. session_change.mp3
+   - A transition sound between work/break
+   - Duration: 1-2 seconds
+   - Example: Wind chime or soft sweep
+
+Currently available:
+✅ timer_complete.mp3
+
+Free sound sources:
+- https://freesound.org
+- https://www.zapsplat.com
+- https://mixkit.co/free-sound-effects/

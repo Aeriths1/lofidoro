@@ -1,0 +1,453 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F1A2B3C2B4D5E6F789012A0 /* LofiTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A1 /* LofiTimerApp.swift */; };
+		4F1A2B3C2B4D5E6F789012A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A3 /* ContentView.swift */; };
+		4F1A2B3C2B4D5E6F789012A4 /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A5 /* PomodoroTimer.swift */; };
+		4F1A2B3C2B4D5E6F789012A6 /* TimerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A7 /* TimerViewModel.swift */; };
+		4F1A2B3C2B4D5E6F789012A8 /* AudioManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A9 /* AudioManager.swift */; };
+		4F1A2B3C2B4D5E6F789012AA /* LofiGirlAnimationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012AB /* LofiGirlAnimationView.swift */; };
+		4F1A2B3C2B4D5E6F789012AC /* UserSettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012AD /* UserSettings.swift */; };
+		4F1A2B3C2B4D5E6F789012AE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012AF /* SettingsView.swift */; };
+		4F1A2B3C2B4D5E6F789012B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012B1 /* Assets.xcassets */; };
+		4F1A2B3C2B4D5E6F789012C9 /* lofi-girl.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012CA /* lofi-girl.gif */; };
+		4F1A2B3C2B4D5E6F789012CD /* lofi-girl-pixel.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012CE /* lofi-girl-pixel.gif */; };
+		4F1A2B3C2B4D5E6F789012D5 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D6 /* snow.gif */; };
+		4F1A2B3C2B4D5E6F789012D7 /* rabbit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */; };
+		4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */; };
+		4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */; };
+		4F1A2B3C2B4D5E6F789012DD /* zelda-campfire-ambience.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DE /* zelda-campfire-ambience.mp3 */; };
+		4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */; };
+		4F1A2B3C2B4D5E6F789012CF /* GifGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */; };
+		4F1A2B3C2B4D5E6F789012D1 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */; };
+		4F1A2B3C2B4D5E6F789012D3 /* MusicSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		4F1A2B3C2B4D5E6F789012A1 /* LofiTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LofiTimerApp.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012A5 /* PomodoroTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012A7 /* TimerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerViewModel.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012A9 /* AudioManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AudioManager.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012AB /* LofiGirlAnimationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LofiGirlAnimationView.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012AD /* UserSettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSettings.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012AF /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012B2 /* LofiTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LofiTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F1A2B3C2B4D5E6F789012CA /* lofi-girl.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "lofi-girl.gif"; path = "LofiTimer/Resources/Animations/lofi-girl.gif"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012CE /* lofi-girl-pixel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "lofi-girl-pixel.gif"; path = "LofiTimer/Resources/Animations/lofi-girl-pixel.gif"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012D6 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "snow.gif"; path = "LofiTimer/Resources/Animations/snow.gif"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "rabbit.gif"; path = "LofiTimer/Resources/Animations/rabbit.gif"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "nujabes-flowers.mp3"; path = "LofiTimer/Resources/Audio/music/nujabes/nujabes-flowers.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kudasai-lofi-background.mp3"; path = "LofiTimer/Resources/Audio/music/kudasai/kudasai-lofi-background.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012DE /* zelda-campfire-ambience.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "zelda-campfire-ambience.mp3"; path = "LofiTimer/Resources/Audio/music/zelda/zelda-campfire-ambience.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "timer_complete.mp3"; path = "LofiTimer/Resources/Audio/effects/timer_complete.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifGalleryView.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSelectorView.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F1A2B3C2B4D5E6F789012B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F1A2B3C2B4D5E6F789012B4 /* LofiTimer */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012A1 /* LofiTimerApp.swift */,
+				4F1A2B3C2B4D5E6F789012B5 /* Views */,
+				4F1A2B3C2B4D5E6F789012B6 /* Models */,
+				4F1A2B3C2B4D5E6F789012B7 /* ViewModels */,
+				4F1A2B3C2B4D5E6F789012CB /* Resources */,
+				4F1A2B3C2B4D5E6F789012B1 /* Assets.xcassets */,
+			);
+			path = LofiTimer;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012B5 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012A3 /* ContentView.swift */,
+				4F1A2B3C2B4D5E6F789012AB /* LofiGirlAnimationView.swift */,
+				4F1A2B3C2B4D5E6F789012AF /* SettingsView.swift */,
+				4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */,
+				4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012B6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012A5 /* PomodoroTimer.swift */,
+				4F1A2B3C2B4D5E6F789012A9 /* AudioManager.swift */,
+				4F1A2B3C2B4D5E6F789012AD /* UserSettings.swift */,
+				4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012B7 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012A7 /* TimerViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012CC /* Animations */,
+				4F1A2B3C2B4D5E6F789012E1 /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012CC /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012CA /* lofi-girl.gif */,
+				4F1A2B3C2B4D5E6F789012CE /* lofi-girl-pixel.gif */,
+				4F1A2B3C2B4D5E6F789012D6 /* snow.gif */,
+				4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012E1 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */,
+				4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */,
+				4F1A2B3C2B4D5E6F789012DE /* zelda-campfire-ambience.mp3 */,
+				4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */,
+			);
+			path = Audio;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012B8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012B2 /* LofiTimer.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012B9 = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012B4 /* LofiTimer */,
+				4F1A2B3C2B4D5E6F789012B8 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F1A2B3C2B4D5E6F789012BA /* LofiTimer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F1A2B3C2B4D5E6F789012BB /* Build configuration list for PBXNativeTarget "LofiTimer" */;
+			buildPhases = (
+				4F1A2B3C2B4D5E6F789012BC /* Sources */,
+				4F1A2B3C2B4D5E6F789012B3 /* Frameworks */,
+				4F1A2B3C2B4D5E6F789012BD /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LofiTimer;
+			productName = LofiTimer;
+			productReference = 4F1A2B3C2B4D5E6F789012B2 /* LofiTimer.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F1A2B3C2B4D5E6F789012BE /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
+				TargetAttributes = {
+					4F1A2B3C2B4D5E6F789012BA = {
+						CreatedOnToolsVersion = 15.0;
+					};
+				};
+			};
+			buildConfigurationList = 4F1A2B3C2B4D5E6F789012BF /* Build configuration list for PBXProject "LofiTimer" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F1A2B3C2B4D5E6F789012B9;
+			productRefGroup = 4F1A2B3C2B4D5E6F789012B8 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F1A2B3C2B4D5E6F789012BA /* LofiTimer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F1A2B3C2B4D5E6F789012BD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F1A2B3C2B4D5E6F789012B0 /* Assets.xcassets in Resources */,
+				4F1A2B3C2B4D5E6F789012C9 /* lofi-girl.gif in Resources */,
+				4F1A2B3C2B4D5E6F789012CD /* lofi-girl-pixel.gif in Resources */,
+				4F1A2B3C2B4D5E6F789012D5 /* snow.gif in Resources */,
+				4F1A2B3C2B4D5E6F789012D7 /* rabbit.gif in Resources */,
+				4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012DD /* zelda-campfire-ambience.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F1A2B3C2B4D5E6F789012BC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F1A2B3C2B4D5E6F789012A2 /* ContentView.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012A4 /* PomodoroTimer.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012A6 /* TimerViewModel.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012A8 /* AudioManager.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012AA /* LofiGirlAnimationView.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012AC /* UserSettings.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012AE /* SettingsView.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012CF /* GifGalleryView.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012D1 /* MusicManager.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012D3 /* MusicSelectorView.swift in Sources */,
+				4F1A2B3C2B4D5E6F789012A0 /* LofiTimerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		4F1A2B3C2B4D5E6F789012C0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4F1A2B3C2B4D5E6F789012C1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F1A2B3C2B4D5E6F789012C2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = NVATCZA23P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lofitimer.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F1A2B3C2B4D5E6F789012C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = NVATCZA23P;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.lofitimer.app;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F1A2B3C2B4D5E6F789012BB /* Build configuration list for PBXNativeTarget "LofiTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F1A2B3C2B4D5E6F789012C2 /* Debug */,
+				4F1A2B3C2B4D5E6F789012C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F1A2B3C2B4D5E6F789012BF /* Build configuration list for PBXProject "LofiTimer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F1A2B3C2B4D5E6F789012C0 /* Debug */,
+				4F1A2B3C2B4D5E6F789012C1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F1A2B3C2B4D5E6F789012BE /* Project object */;
+}

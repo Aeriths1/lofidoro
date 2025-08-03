@@ -1,0 +1,13 @@
+SESSION CHANGE SOUND NEEDED
+============================
+Recommended: Transition or sweep sound
+Duration: 1-2 seconds
+Style: Smooth transition
+
+Try these searches on freesound.org:
+- "wind chimes"
+- "transition sweep"
+- "ambient bell"
+- "soft whoosh"
+
+Or use system sound ID: 1013 (Rising)

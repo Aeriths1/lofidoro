@@ -1,0 +1,13 @@
+TIMER START SOUND NEEDED
+========================
+Recommended: Soft chime or gentle bell
+Duration: 0.5-1 second
+Style: Calming, not jarring
+
+Try these searches on freesound.org:
+- "meditation bell"
+- "soft chime"
+- "gentle notification"
+- "zen bell"
+
+Or use system sound ID: 1103 (Tink)
