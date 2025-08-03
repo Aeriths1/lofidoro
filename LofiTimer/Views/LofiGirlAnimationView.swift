@@ -85,8 +85,11 @@ struct GifImageView: UIViewRepresentable {
     
     func updateUIView(_ uiView: UIView, context: Context) {
         if let imageView = uiView.subviews.first as? UIImageView {
-            // Check if GIF name or speed changed
-            if context.coordinator.currentGifName != gifName || context.coordinator.currentPlaybackSpeed != playbackSpeed {
+            // Check if GIF name or speed changed (use absolute difference for floating point comparison)
+            let speedChanged = abs(context.coordinator.currentPlaybackSpeed - playbackSpeed) > 0.01
+            let nameChanged = context.coordinator.currentGifName != gifName
+            
+            if nameChanged || speedChanged {
                 print("GIF changed from \(context.coordinator.currentGifName) to \(gifName) or speed changed from \(context.coordinator.currentPlaybackSpeed) to \(playbackSpeed)")
                 loadGif(imageView: imageView)
                 context.coordinator.currentGifName = gifName
@@ -112,14 +115,7 @@ struct GifImageView: UIViewRepresentable {
             return
         }
         
-        // Try using UIImage's built-in animated image support first
-        if let animatedImage = UIImage.gif(data: data) {
-            imageView.image = animatedImage
-            print("Loaded GIF using UIImage.gif, size: \(animatedImage.size)")
-            return
-        }
-        
-        // Fallback to manual frame extraction
+        // Use manual frame extraction to support playback speed control
         guard let source = CGImageSourceCreateWithData(data as CFData, nil) else {
             print("Failed to create image source")
             return

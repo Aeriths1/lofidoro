@@ -40,13 +40,11 @@ struct ContentView: View {
                 
                 // Main UI
                 VStack {
-                    // Top status indicator - studying/chilling
-                    topStatusIndicator
-                        .padding(.top, 60) // Account for status bar
+                    Spacer()
+                        .frame(height: 80) // Account for status bar
                     
-                    // Timer display
+                    // Timer display (now includes studying/chilling status)
                     timerDisplay
-                        .padding(.top, 20)
                     
                     Spacer()
                     
@@ -181,12 +179,30 @@ struct ContentView: View {
                 .monospacedDigit()
                 .shadow(color: .black.opacity(0.5), radius: 10, x: 0, y: 5)
             
-            // Session type
-            Text(timerViewModel.sessionTypeText)
-                .font(.system(size: 18, weight: .medium, design: .rounded))
-                .foregroundColor(.white.opacity(0.8))
-                .textCase(.lowercase)
-                .tracking(2)
+            // Studying/Chilling status (replaces session type)
+            HStack(spacing: 12) {
+                Circle()
+                    .fill(timerViewModel.isRunning ? 
+                          Color(red: 0.4, green: 1.0, blue: 0.6) : 
+                          Color.white.opacity(0.5))
+                    .frame(width: 12, height: 12)
+                    .scaleEffect(timerViewModel.isRunning ? 1.0 : 0.8)
+                    .animation(
+                        timerViewModel.isRunning ?
+                        Animation.easeInOut(duration: 1.5).repeatForever(autoreverses: true) :
+                        Animation.easeInOut(duration: 0.3),
+                        value: timerViewModel.isRunning
+                    )
+                    .shadow(color: timerViewModel.isRunning ? 
+                           Color(red: 0.4, green: 1.0, blue: 0.6).opacity(0.6) : 
+                           Color.clear, radius: 8)
+                
+                Text(timerViewModel.isRunning ? "studying" : "chilling")
+                    .font(.system(size: 18, weight: .medium, design: .rounded))
+                    .foregroundColor(.white.opacity(0.9))
+                    .tracking(2)
+                    .textCase(.lowercase)
+            }
             
             // Progress bar
             GeometryReader { geo in
@@ -333,7 +349,7 @@ struct ContentView: View {
     
     private var bottomControlsBar: some View {
         HStack(spacing: 20) {
-                // Volume control
+            // Volume control
                 HStack {
                     Button(action: {
                         withAnimation(.spring()) {
@@ -440,7 +456,6 @@ struct ContentView: View {
                     }
                 }
             }
-        }
         .padding(.horizontal, 20)
     }
 }
