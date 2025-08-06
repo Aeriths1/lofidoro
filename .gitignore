@@ -131,5 +131,4 @@ Temporary Items
 *.wmv
 
 # Large local audio files - keep local only
-LofiTimer/Resources/Audio/music/zelda/zelda.mp3
 LofiTimer/Resources/Audio/music/whitenoise/SnowfallinTimesSquare.mp3
