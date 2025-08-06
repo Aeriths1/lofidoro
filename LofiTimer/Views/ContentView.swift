@@ -89,6 +89,9 @@ struct ContentView: View {
                 .frame(height: 80)
             
             timerDisplay
+                .opacity(isZenModeActive ? 0 : 1)
+                .scaleEffect(isZenModeActive ? 0.8 : 1.0)
+                .animation(.easeInOut(duration: 0.5), value: isZenModeActive)
             
             Spacer()
             
@@ -179,6 +182,9 @@ struct ContentView: View {
                 
                 Spacer()
             }
+            .opacity(isZenModeActive ? 0 : 1)
+            .scaleEffect(isZenModeActive ? 0.8 : 1.0)
+            .animation(.easeInOut(duration: 0.5), value: isZenModeActive)
             .frame(maxWidth: .infinity)
             .padding(.leading, 30)
             
