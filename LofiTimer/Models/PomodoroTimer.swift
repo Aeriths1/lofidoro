@@ -40,10 +40,10 @@ struct PomodoroSession {
     var timeRemaining: TimeInterval
     var completedPomodoros: Int
     
-    init(type: SessionType, completedPomodoros: Int = 0) {
+    init(type: SessionType, completedPomodoros: Int = 0, customDuration: TimeInterval? = nil) {
         self.type = type
-        self.duration = type.duration
-        self.timeRemaining = type.duration
+        self.duration = customDuration ?? type.duration
+        self.timeRemaining = customDuration ?? type.duration
         self.completedPomodoros = completedPomodoros
     }
     
@@ -110,6 +110,19 @@ class PomodoroTimer: ObservableObject {
     func reset() {
         stop()
         currentSession.reset()
+    }
+    
+    func adjustCurrentSessionDuration(_ newDuration: TimeInterval) {
+        guard state == .stopped else { return }
+        
+        // Create a new session with the adjusted duration
+        let adjustedSession = PomodoroSession(
+            type: currentSession.type,
+            completedPomodoros: currentSession.completedPomodoros,
+            customDuration: newDuration
+        )
+        
+        currentSession = adjustedSession
     }
     
     private func tick() {

@@ -112,7 +112,7 @@ echo ""
 echo "🎞️ Adding GIF animations..."
 animations_dir="LofiTimer/Resources/Animations"
 if [ -d "$animations_dir" ]; then
-    for file in "$animations_dir"/*.gif 2>/dev/null; do
+    for file in "$animations_dir"/*.gif; do
         if [ -f "$file" ]; then
             filename=$(basename "$file")
             relative_path="Resources/Animations/$filename"

@@ -5,6 +5,9 @@ enum MusicCategory: String, CaseIterable {
     case nujabes = "nujabes"
     case kudasai = "kudasai"
     case zelda = "zelda"
+    case whitenoise = "whitenoise"
+    case billevans = "BillEvans"
+    case chetbaker = "ChetBaker"
     
     var displayName: String {
         switch self {
@@ -13,7 +16,13 @@ enum MusicCategory: String, CaseIterable {
         case .kudasai:
             return "Kudasai"
         case .zelda:
-            return "Zelda & Gaming"
+            return "Zelda"
+        case .whitenoise:
+            return "White Noise"
+        case .billevans:
+            return "Bill Evans"
+        case .chetbaker:
+            return "Chet Baker"
         }
     }
     
@@ -25,6 +34,12 @@ enum MusicCategory: String, CaseIterable {
             return "Modern lofi with guitar"
         case .zelda:
             return "Gaming lofi remixes"
+        case .whitenoise:
+            return "Ambient white noise for focus"
+        case .billevans:
+            return "Classic jazz piano compositions"
+        case .chetbaker:
+            return "Smooth jazz trumpet and vocals"
         }
     }
     
@@ -36,6 +51,12 @@ enum MusicCategory: String, CaseIterable {
             return "guitars"
         case .zelda:
             return "gamecontroller"
+        case .whitenoise:
+            return "waveform"
+        case .billevans:
+            return "pianokeys"
+        case .chetbaker:
+            return "music.mic"
         }
     }
 }
@@ -70,32 +91,36 @@ class MusicManager: ObservableObject {
     private func getMusicFiles(for category: MusicCategory) -> [String] {
         var musicFiles: [String] = []
         
-        // Try to find music in the bundle
-        if let resourcePath = Bundle.main.resourcePath {
-            let categoryPath = (resourcePath as NSString).appendingPathComponent("music/\(category.rawValue)")
-            
-            do {
-                let files = try FileManager.default.contentsOfDirectory(atPath: categoryPath)
-                musicFiles = files.filter { file in
-                    let lowercased = file.lowercased()
-                    return lowercased.hasSuffix(".mp3") || 
-                           lowercased.hasSuffix(".m4a") || 
-                           lowercased.hasSuffix(".wav")
+        // Map categories to known music files
+        let categoryMusicMap: [MusicCategory: [String]] = [
+            .nujabes: ["nujabes-flowers", "Dj_Cutman_Samurai_Champloo_lofi_hip_hop"],
+            .kudasai: ["kudasai-lofi-background", "Ikigai_kudasaibeats_technicolor"],
+            .zelda: ["zelda"],
+            .whitenoise: ["SnowfallinTimesSquare"],
+            .billevans: ["William_Repicci_Bill_Evans_Peace_Piece", "jane8948_Bill_Evans_Waltz_For_Debby"],
+            .chetbaker: ["Andrea_Aymerich_Panero_Chet_Baker_Rain"]
+        ]
+        
+        // Get the predefined tracks for this category
+        if let tracks = categoryMusicMap[category] {
+            // Verify each track exists in the bundle
+            for track in tracks {
+                if Bundle.main.url(forResource: track, withExtension: "mp3") != nil {
+                    musicFiles.append(track)
+                } else {
+                    print("Warning: Could not find \(track).mp3 in bundle for category \(category.displayName)")
                 }
-                .map { String($0.dropLast(4)) } // Remove extension
-                .sorted()
-            } catch {
-                print("Could not load music for \(category.displayName): \(error)")
             }
         }
         
-        // Also check for files directly in bundle with category prefix
+        // Also check for files directly in bundle with category prefix as fallback
         let categoryPrefix = category.rawValue
         if let urls = Bundle.main.urls(forResourcesWithExtension: "mp3", subdirectory: nil) {
             let categoryFiles = urls
                 .compactMap { $0.lastPathComponent }
                 .filter { $0.hasPrefix(categoryPrefix) }
                 .map { String($0.dropLast(4)) }
+                .filter { !musicFiles.contains($0) } // Avoid duplicates
             
             musicFiles.append(contentsOf: categoryFiles)
         }

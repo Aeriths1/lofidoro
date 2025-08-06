@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5D3F103A65044BF3BFF33B12 /* timer_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = EAFC786DA81D45FDB3EA8777 /* timer_complete.mp3 */; };
+		66DFCF252DC047D1873B7847 /* zelda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = E25F55140F754A4EA9CE194E /* zelda.mp3 */; };
+		8A71DB044042428B91A91B32 /* kudasai-lofi-background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = CF7DF044FC3647268E12A774 /* kudasai-lofi-background.mp3 */; };
+		D1E3A1983FD84A31992F6928 /* Ikigai_kudasaibeats_technicolor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 6B3135E0ED1F4090ADC5B113 /* Ikigai_kudasaibeats_technicolor.mp3 */; };
+		72FC8EA41B894DF887618539 /* nujabes-flowers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = DF68B77C7F4E470BA1DA2297 /* nujabes-flowers.mp3 */; };
+		5A81F2CB8E904EDB8DAF5A69 /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = D6002E97CEB74E4BA2BE6E4E /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 */; };
 		4F1A2B3C2B4D5E6F789012A0 /* LofiTimerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A1 /* LofiTimerApp.swift */; };
 		4F1A2B3C2B4D5E6F789012A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A3 /* ContentView.swift */; };
 		4F1A2B3C2B4D5E6F789012A4 /* PomodoroTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012A5 /* PomodoroTimer.swift */; };
@@ -17,19 +23,34 @@
 		4F1A2B3C2B4D5E6F789012AE /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012AF /* SettingsView.swift */; };
 		4F1A2B3C2B4D5E6F789012B0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012B1 /* Assets.xcassets */; };
 		4F1A2B3C2B4D5E6F789012C9 /* lofi-girl.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012CA /* lofi-girl.gif */; };
-		4F1A2B3C2B4D5E6F789012CD /* lofi-girl-pixel.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012CE /* lofi-girl-pixel.gif */; };
+		4F1A2B3C2B4D5E6F789012CF /* GifGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */; };
+		4F1A2B3C2B4D5E6F789012D1 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */; };
+		4F1A2B3C2B4D5E6F789012D3 /* MusicSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */; };
 		4F1A2B3C2B4D5E6F789012D5 /* snow.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D6 /* snow.gif */; };
 		4F1A2B3C2B4D5E6F789012D7 /* rabbit.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */; };
 		4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */; };
 		4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */; };
 		4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */; };
 		4F1A2B3C2B4D5E6F789012E3 /* zelda.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */; };
-		4F1A2B3C2B4D5E6F789012CF /* GifGalleryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */; };
-		4F1A2B3C2B4D5E6F789012D1 /* MusicManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */; };
-		4F1A2B3C2B4D5E6F789012D3 /* MusicSelectorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */; };
+		4F1A2B3C2B4D5E6F789012E4 /* dancing.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E5 /* dancing.gif */; };
+		4F1A2B3C2B4D5E6F789012E6 /* drawing.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E7 /* drawing.gif */; };
+		4F1A2B3C2B4D5E6F789012E8 /* noodling.gif in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012E9 /* noodling.gif */; };
+		4F1A2B3C2B4D5E6F789012EA /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012EB /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 */; };
+		4F1A2B3C2B4D5E6F789012EC /* Ikigai_kudasaibeats_technicolor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012ED /* Ikigai_kudasaibeats_technicolor.mp3 */; };
+		4F1A2B3C2B4D5E6F789012EE /* William_Repicci_Bill_Evans_Peace_Piece.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012EF /* William_Repicci_Bill_Evans_Peace_Piece.mp3 */; };
+		4F1A2B3C2B4D5E6F789012F0 /* jane8948_Bill_Evans_Waltz_For_Debby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012F1 /* jane8948_Bill_Evans_Waltz_For_Debby.mp3 */; };
+		4F1A2B3C2B4D5E6F789012F2 /* Andrea_Aymerich_Panero_Chet_Baker_Rain.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012F3 /* Andrea_Aymerich_Panero_Chet_Baker_Rain.mp3 */; };
+		4F1A2B3C2B4D5E6F789012F4 /* SnowfallinTimesSquare.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 4F1A2B3C2B4D5E6F789012F5 /* SnowfallinTimesSquare.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		EAFC786DA81D45FDB3EA8777 /* timer_complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Resources/Audio/effects/timer_complete.mp3"; sourceTree = "<group>"; };
+		E25F55140F754A4EA9CE194E /* zelda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Resources/Audio/music/zelda/zelda.mp3"; sourceTree = "<group>"; };
+		CF7DF044FC3647268E12A774 /* kudasai-lofi-background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Resources/Audio/music/kudasai/kudasai-lofi-background.mp3"; sourceTree = "<group>"; };
+		6B3135E0ED1F4090ADC5B113 /* Ikigai_kudasaibeats_technicolor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Resources/Audio/music/kudasai/Ikigai_kudasaibeats_technicolor.mp3"; sourceTree = "<group>"; };
+		DF68B77C7F4E470BA1DA2297 /* nujabes-flowers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Resources/Audio/music/nujabes/nujabes-flowers.mp3"; sourceTree = "<group>"; };
+		D6002E97CEB74E4BA2BE6E4E /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Resources/Audio/music/nujabes/Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3"; sourceTree = "<group>"; };
+		34563BBA2E4311130020DD50 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012A1 /* LofiTimerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LofiTimerApp.swift; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012A3 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012A5 /* PomodoroTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PomodoroTimer.swift; sourceTree = "<group>"; };
@@ -41,16 +62,24 @@
 		4F1A2B3C2B4D5E6F789012B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012B2 /* LofiTimer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LofiTimer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1A2B3C2B4D5E6F789012CA /* lofi-girl.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "lofi-girl.gif"; path = "LofiTimer/Resources/Animations/lofi-girl.gif"; sourceTree = SOURCE_ROOT; };
-		4F1A2B3C2B4D5E6F789012CE /* lofi-girl-pixel.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "lofi-girl-pixel.gif"; path = "LofiTimer/Resources/Animations/lofi-girl-pixel.gif"; sourceTree = SOURCE_ROOT; };
-		4F1A2B3C2B4D5E6F789012D6 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "snow.gif"; path = "LofiTimer/Resources/Animations/snow.gif"; sourceTree = SOURCE_ROOT; };
-		4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "rabbit.gif"; path = "LofiTimer/Resources/Animations/rabbit.gif"; sourceTree = SOURCE_ROOT; };
-		4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "nujabes-flowers.mp3"; path = "LofiTimer/Resources/Audio/music/nujabes/nujabes-flowers.mp3"; sourceTree = SOURCE_ROOT; };
-		4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kudasai-lofi-background.mp3"; path = "LofiTimer/Resources/Audio/music/kudasai/kudasai-lofi-background.mp3"; sourceTree = SOURCE_ROOT; };
-		4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "timer_complete.mp3"; path = "LofiTimer/Resources/Audio/effects/timer_complete.mp3"; sourceTree = SOURCE_ROOT; };
-		4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "zelda.mp3"; path = "LofiTimer/Resources/Audio/music/zelda/zelda.mp3"; sourceTree = SOURCE_ROOT; };
 		4F1A2B3C2B4D5E6F789012D0 /* GifGalleryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GifGalleryView.swift; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012D2 /* MusicManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicManager.swift; sourceTree = "<group>"; };
 		4F1A2B3C2B4D5E6F789012D4 /* MusicSelectorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MusicSelectorView.swift; sourceTree = "<group>"; };
+		4F1A2B3C2B4D5E6F789012D6 /* snow.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = snow.gif; path = LofiTimer/Resources/Animations/snow.gif; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = rabbit.gif; path = LofiTimer/Resources/Animations/rabbit.gif; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "nujabes-flowers.mp3"; path = "LofiTimer/Resources/Audio/music/nujabes/nujabes-flowers.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "kudasai-lofi-background.mp3"; path = "LofiTimer/Resources/Audio/music/kudasai/kudasai-lofi-background.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = timer_complete.mp3; path = LofiTimer/Resources/Audio/effects/timer_complete.mp3; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = zelda.mp3; path = LofiTimer/Resources/Audio/music/zelda/zelda.mp3; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012E5 /* dancing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = dancing.gif; path = LofiTimer/Resources/Animations/dancing.gif; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012E7 /* drawing.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = drawing.gif; path = LofiTimer/Resources/Animations/drawing.gif; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012E9 /* noodling.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = noodling.gif; path = LofiTimer/Resources/Animations/noodling.gif; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012EB /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3"; path = "LofiTimer/Resources/Audio/music/nujabes/Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012ED /* Ikigai_kudasaibeats_technicolor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Ikigai_kudasaibeats_technicolor.mp3"; path = "LofiTimer/Resources/Audio/music/kudasai/Ikigai_kudasaibeats_technicolor.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012EF /* William_Repicci_Bill_Evans_Peace_Piece.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "William_Repicci_Bill_Evans_Peace_Piece.mp3"; path = "LofiTimer/Resources/Audio/music/BillEvans/William_Repicci_Bill_Evans_Peace_Piece.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012F1 /* jane8948_Bill_Evans_Waltz_For_Debby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "jane8948_Bill_Evans_Waltz_For_Debby.mp3"; path = "LofiTimer/Resources/Audio/music/BillEvans/jane8948_Bill_Evans_Waltz_For_Debby.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012F3 /* Andrea_Aymerich_Panero_Chet_Baker_Rain.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = "Andrea_Aymerich_Panero_Chet_Baker_Rain.mp3"; path = "LofiTimer/Resources/Audio/music/ChetBaker/Andrea_Aymerich_Panero_Chet_Baker_Rain.mp3"; sourceTree = SOURCE_ROOT; };
+		4F1A2B3C2B4D5E6F789012F5 /* SnowfallinTimesSquare.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; name = SnowfallinTimesSquare.mp3; path = LofiTimer/Resources/Audio/music/whitenoise/SnowfallinTimesSquare.mp3; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +87,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3F103A65044BF3BFF33B12 /* timer_complete.mp3 in Resources */,
+				66DFCF252DC047D1873B7847 /* zelda.mp3 in Resources */,
+				8A71DB044042428B91A91B32 /* kudasai-lofi-background.mp3 in Resources */,
+				D1E3A1983FD84A31992F6928 /* Ikigai_kudasaibeats_technicolor.mp3 in Resources */,
+				72FC8EA41B894DF887618539 /* nujabes-flowers.mp3 in Resources */,
+				5A81F2CB8E904EDB8DAF5A69 /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -67,6 +102,7 @@
 		4F1A2B3C2B4D5E6F789012B4 /* LofiTimer */ = {
 			isa = PBXGroup;
 			children = (
+				34563BBA2E4311130020DD50 /* Info.plist */,
 				4F1A2B3C2B4D5E6F789012A1 /* LofiTimerApp.swift */,
 				4F1A2B3C2B4D5E6F789012B5 /* Views */,
 				4F1A2B3C2B4D5E6F789012B6 /* Models */,
@@ -108,37 +144,6 @@
 			path = ViewModels;
 			sourceTree = "<group>";
 		};
-		4F1A2B3C2B4D5E6F789012CB /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				4F1A2B3C2B4D5E6F789012CC /* Animations */,
-				4F1A2B3C2B4D5E6F789012E1 /* Audio */,
-			);
-			path = Resources;
-			sourceTree = "<group>";
-		};
-		4F1A2B3C2B4D5E6F789012CC /* Animations */ = {
-			isa = PBXGroup;
-			children = (
-				4F1A2B3C2B4D5E6F789012CA /* lofi-girl.gif */,
-				4F1A2B3C2B4D5E6F789012CE /* lofi-girl-pixel.gif */,
-				4F1A2B3C2B4D5E6F789012D6 /* snow.gif */,
-				4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */,
-			);
-			path = Animations;
-			sourceTree = "<group>";
-		};
-		4F1A2B3C2B4D5E6F789012E1 /* Audio */ = {
-			isa = PBXGroup;
-			children = (
-				4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */,
-				4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */,
-				4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */,
-				4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */,
-			);
-			path = Audio;
-			sourceTree = "<group>";
-		};
 		4F1A2B3C2B4D5E6F789012B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +158,45 @@
 				4F1A2B3C2B4D5E6F789012B4 /* LofiTimer */,
 				4F1A2B3C2B4D5E6F789012B8 /* Products */,
 			);
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012CB /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012CC /* Animations */,
+				4F1A2B3C2B4D5E6F789012E1 /* Audio */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012CC /* Animations */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012CA /* lofi-girl.gif */,
+				4F1A2B3C2B4D5E6F789012D6 /* snow.gif */,
+				4F1A2B3C2B4D5E6F789012D8 /* rabbit.gif */,
+				4F1A2B3C2B4D5E6F789012E5 /* dancing.gif */,
+				4F1A2B3C2B4D5E6F789012E7 /* drawing.gif */,
+				4F1A2B3C2B4D5E6F789012E9 /* noodling.gif */,
+			);
+			path = Animations;
+			sourceTree = "<group>";
+		};
+		4F1A2B3C2B4D5E6F789012E1 /* Audio */ = {
+			isa = PBXGroup;
+			children = (
+				4F1A2B3C2B4D5E6F789012DA /* nujabes-flowers.mp3 */,
+				4F1A2B3C2B4D5E6F789012EB /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 */,
+				4F1A2B3C2B4D5E6F789012DC /* kudasai-lofi-background.mp3 */,
+				4F1A2B3C2B4D5E6F789012ED /* Ikigai_kudasaibeats_technicolor.mp3 */,
+				4F1A2B3C2B4D5E6F789012E2 /* zelda.mp3 */,
+				4F1A2B3C2B4D5E6F789012EF /* William_Repicci_Bill_Evans_Peace_Piece.mp3 */,
+				4F1A2B3C2B4D5E6F789012F1 /* jane8948_Bill_Evans_Waltz_For_Debby.mp3 */,
+				4F1A2B3C2B4D5E6F789012F3 /* Andrea_Aymerich_Panero_Chet_Baker_Rain.mp3 */,
+				4F1A2B3C2B4D5E6F789012F5 /* SnowfallinTimesSquare.mp3 */,
+				4F1A2B3C2B4D5E6F789012E0 /* timer_complete.mp3 */,
+			);
+			path = Audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,13 +259,21 @@
 			files = (
 				4F1A2B3C2B4D5E6F789012B0 /* Assets.xcassets in Resources */,
 				4F1A2B3C2B4D5E6F789012C9 /* lofi-girl.gif in Resources */,
-				4F1A2B3C2B4D5E6F789012CD /* lofi-girl-pixel.gif in Resources */,
 				4F1A2B3C2B4D5E6F789012D5 /* snow.gif in Resources */,
 				4F1A2B3C2B4D5E6F789012D7 /* rabbit.gif in Resources */,
 				4F1A2B3C2B4D5E6F789012D9 /* nujabes-flowers.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012DB /* kudasai-lofi-background.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012E3 /* zelda.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012DF /* timer_complete.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012E4 /* dancing.gif in Resources */,
+				4F1A2B3C2B4D5E6F789012E6 /* drawing.gif in Resources */,
+				4F1A2B3C2B4D5E6F789012E8 /* noodling.gif in Resources */,
+				4F1A2B3C2B4D5E6F789012EA /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012EC /* Ikigai_kudasaibeats_technicolor.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012EE /* William_Repicci_Bill_Evans_Peace_Piece.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012F0 /* jane8948_Bill_Evans_Waltz_For_Debby.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012F2 /* Andrea_Aymerich_Panero_Chet_Baker_Rain.mp3 in Resources */,
+				4F1A2B3C2B4D5E6F789012F4 /* SnowfallinTimesSquare.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +284,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5D3F103A65044BF3BFF33B12 /* timer_complete.mp3 in Resources */,
+				66DFCF252DC047D1873B7847 /* zelda.mp3 in Resources */,
+				8A71DB044042428B91A91B32 /* kudasai-lofi-background.mp3 in Resources */,
+				D1E3A1983FD84A31992F6928 /* Ikigai_kudasaibeats_technicolor.mp3 in Resources */,
+				72FC8EA41B894DF887618539 /* nujabes-flowers.mp3 in Resources */,
+				5A81F2CB8E904EDB8DAF5A69 /* Dj_Cutman_Samurai_Champloo_lofi_hip_hop.mp3 in Resources */,
 				4F1A2B3C2B4D5E6F789012A2 /* ContentView.swift in Sources */,
 				4F1A2B3C2B4D5E6F789012A4 /* PomodoroTimer.swift in Sources */,
 				4F1A2B3C2B4D5E6F789012A6 /* TimerViewModel.swift in Sources */,
@@ -379,6 +437,7 @@
 				DEVELOPMENT_TEAM = NVATCZA23P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LofiTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -408,6 +467,7 @@
 				DEVELOPMENT_TEAM = NVATCZA23P;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LofiTimer/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;

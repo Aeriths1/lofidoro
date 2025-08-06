@@ -6,6 +6,7 @@ class TimerViewModel: ObservableObject {
     @Published private var pomodoroTimer = PomodoroTimer()
     @Published var audioManager = AudioManager()
     
+    private var userSettings: UserSettings?
     private var cancellables = Set<AnyCancellable>()
     
     var currentSession: PomodoroSession {
@@ -48,6 +49,14 @@ class TimerViewModel: ObservableObject {
         currentSession.progress
     }
     
+    var timeRemaining: TimeInterval {
+        currentSession.timeRemaining
+    }
+    
+    var initialDuration: TimeInterval {
+        currentSession.duration
+    }
+    
     var playButtonText: String {
         switch state {
         case .stopped, .paused:
@@ -57,9 +66,14 @@ class TimerViewModel: ObservableObject {
         }
     }
     
-    init() {
+    init(userSettings: UserSettings? = nil) {
+        self.userSettings = userSettings
         observeTimer()
         observeTimerCompletion()
+    }
+    
+    func setUserSettings(_ settings: UserSettings) {
+        self.userSettings = settings
     }
     
     func toggleTimer() {
@@ -91,6 +105,17 @@ class TimerViewModel: ObservableObject {
         }
     }
     
+    func adjustTimerDuration(_ minutesToAdd: Int) {
+        // Only allow adjustment when timer is stopped and at initial duration
+        guard isStopped && timeRemaining == initialDuration else { return }
+        
+        let secondsToAdd = TimeInterval(minutesToAdd * 60)
+        let newDuration = max(300, initialDuration + secondsToAdd) // Minimum 5 minutes
+        
+        pomodoroTimer.adjustCurrentSessionDuration(newDuration)
+        audioManager.playHapticFeedback(style: .light)
+    }
+    
     private func observeTimer() {
         pomodoroTimer.objectWillChange.sink { [weak self] in
             DispatchQueue.main.async {
@@ -105,11 +130,24 @@ class TimerViewModel: ObservableObject {
             .dropFirst()
             .sink { [weak self] session in
                 if session.timeRemaining == session.duration {
-                    // Play different sounds for different transitions
-                    if session.type == .work {
-                        self?.audioManager.playSessionChangeSound()
+                    // Update statistics when a session completes
+                    if let userSettings = self?.userSettings {
+                        if session.type == .work {
+                            // A work session just completed
+                            userSettings.incrementCompletedPomodoros()
+                            userSettings.addStudyTime(session.duration)
+                            self?.audioManager.playSessionChangeSound()
+                        } else {
+                            // A break session just completed
+                            self?.audioManager.playTimerCompletionSound()
+                        }
                     } else {
-                        self?.audioManager.playTimerCompletionSound()
+                        // Fallback: just play sounds without statistics
+                        if session.type == .work {
+                            self?.audioManager.playSessionChangeSound()
+                        } else {
+                            self?.audioManager.playTimerCompletionSound()
+                        }
                     }
                 }
             }

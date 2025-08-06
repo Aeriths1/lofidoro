@@ -66,6 +66,26 @@ class UserSettings: ObservableObject {
         didSet { saveSettings() }
     }
     
+    @Published var studyingStatusText: String = "studying" {
+        didSet { saveSettings() }
+    }
+    
+    @Published var chillingStatusText: String = "chilling" {
+        didSet { saveSettings() }
+    }
+    
+    @Published var enableBackgroundAudio: Bool = true {
+        didSet { saveSettings() }
+    }
+    
+    @Published var enableZenMode: Bool = false {
+        didSet { saveSettings() }
+    }
+    
+    @Published var zenModeDelay: Double = 90.0 {
+        didSet { saveSettings() }
+    }
+    
     private let userDefaults = UserDefaults.standard
     
     init() {
@@ -89,6 +109,11 @@ class UserSettings: ObservableObject {
         gifOffsetX = userDefaults.object(forKey: "gifOffsetX") as? Double ?? 0.0
         gifOffsetY = userDefaults.object(forKey: "gifOffsetY") as? Double ?? 0.0
         gifPlaybackSpeed = userDefaults.object(forKey: "gifPlaybackSpeed") as? Double ?? 1.0
+        studyingStatusText = userDefaults.object(forKey: "studyingStatusText") as? String ?? "studying"
+        chillingStatusText = userDefaults.object(forKey: "chillingStatusText") as? String ?? "chilling"
+        enableBackgroundAudio = userDefaults.object(forKey: "enableBackgroundAudio") as? Bool ?? true
+        enableZenMode = userDefaults.object(forKey: "enableZenMode") as? Bool ?? false
+        zenModeDelay = userDefaults.object(forKey: "zenModeDelay") as? Double ?? 90.0
     }
     
     private func saveSettings() {
@@ -108,6 +133,11 @@ class UserSettings: ObservableObject {
         userDefaults.set(gifOffsetX, forKey: "gifOffsetX")
         userDefaults.set(gifOffsetY, forKey: "gifOffsetY")
         userDefaults.set(gifPlaybackSpeed, forKey: "gifPlaybackSpeed")
+        userDefaults.set(studyingStatusText, forKey: "studyingStatusText")
+        userDefaults.set(chillingStatusText, forKey: "chillingStatusText")
+        userDefaults.set(enableBackgroundAudio, forKey: "enableBackgroundAudio")
+        userDefaults.set(enableZenMode, forKey: "enableZenMode")
+        userDefaults.set(zenModeDelay, forKey: "zenModeDelay")
     }
     
     func incrementCompletedPomodoros() {

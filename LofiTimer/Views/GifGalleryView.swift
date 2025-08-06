@@ -56,7 +56,7 @@ class GifLoader {
         // If no GIFs found, try to find them by scanning for all possible GIFs
         if gifNames.isEmpty {
             // Check for any GIF files as fallback
-            let possibleGifs = ["lofi-girl", "lofi-girl-pixel", "snow", "rabbit", "rain", "study", "coffee", "night", "sunset", "city"]
+            let possibleGifs = ["lofi-girl", "snow", "rabbit", "dancing", "drawing", "noodling"]
             gifNames = possibleGifs.filter { gifName in
                 Bundle.main.url(forResource: gifName, withExtension: "gif") != nil
             }
