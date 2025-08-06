@@ -5,7 +5,6 @@ enum MusicCategory: String, CaseIterable {
     case nujabes = "nujabes"
     case kudasai = "kudasai"
     case zelda = "zelda"
-    case whitenoise = "whitenoise"
     case billevans = "BillEvans"
     case chetbaker = "ChetBaker"
     
@@ -17,8 +16,6 @@ enum MusicCategory: String, CaseIterable {
             return "Kudasai"
         case .zelda:
             return "Zelda"
-        case .whitenoise:
-            return "White Noise"
         case .billevans:
             return "Bill Evans"
         case .chetbaker:
@@ -34,8 +31,6 @@ enum MusicCategory: String, CaseIterable {
             return "Modern lofi with guitar"
         case .zelda:
             return "Gaming lofi remixes"
-        case .whitenoise:
-            return "Ambient white noise for focus"
         case .billevans:
             return "Classic jazz piano compositions"
         case .chetbaker:
@@ -51,8 +46,6 @@ enum MusicCategory: String, CaseIterable {
             return "guitars"
         case .zelda:
             return "gamecontroller"
-        case .whitenoise:
-            return "waveform"
         case .billevans:
             return "pianokeys"
         case .chetbaker:
@@ -96,7 +89,6 @@ class MusicManager: ObservableObject {
             .nujabes: ["nujabes-flowers", "Dj_Cutman_Samurai_Champloo_lofi_hip_hop"],
             .kudasai: ["kudasai-lofi-background", "Ikigai_kudasaibeats_technicolor"],
             .zelda: ["zelda"],
-            .whitenoise: ["SnowfallinTimesSquare"],
             .billevans: ["William_Repicci_Bill_Evans_Peace_Piece", "jane8948_Bill_Evans_Waltz_For_Debby"],
             .chetbaker: ["Andrea_Aymerich_Panero_Chet_Baker_Rain"]
         ]
